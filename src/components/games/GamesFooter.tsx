@@ -1,46 +1,63 @@
 "use client";
 
 import Link from "next/link";
-import { Gamepad2, ArrowLeft, Zap, Heart } from "lucide-react";
 
 export default function GamesFooter() {
   return (
-    <footer className="bg-slate-950 border-t border-purple-950/40 text-slate-400 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-900">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-600 flex items-center justify-center">
-              <Gamepad2 className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <span className="text-xl font-black text-white tracking-wider">
-                ARKLINE <span className="text-pink-400">GAMES</span>
-              </span>
-              <p className="text-xs text-slate-400">
-                An Arkline Technology Mobile Gaming Studio
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4">
+    <footer className="bg-neutral-900">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+          {/* Brand */}
+          <div>
+            <p className="text-base font-bold text-white mb-3">ARKLINE GAMES</p>
+            <p className="text-sm text-neutral-500 leading-relaxed mb-6">
+              İstanbul merkezli, küresel ölçekli mobil oyun şirketi.
+            </p>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-amber-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="text-sm text-neutral-400 hover:text-white transition-colors"
             >
-              <Zap className="w-3.5 h-3.5" />
-              <span>Ana Şirket: Arkline Teknoloji (Elektrik & Enerji)</span>
+              ← Arkline Teknoloji
             </Link>
+          </div>
+
+          {/* Links */}
+          <div>
+            <p className="text-xs text-neutral-500 uppercase tracking-widest mb-5">Şirket</p>
+            <ul className="space-y-3">
+              {[
+                ["Hakkımızda", "#about"],
+                ["Oyunlar", "#games"],
+                ["Kariyer", "#careers"],
+              ].map(([label, href]) => (
+                <li key={label}>
+                  <a href={href} className="text-sm text-neutral-400 hover:text-white transition-colors">
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-xs text-neutral-500 uppercase tracking-widest mb-5">İletişim</p>
+            <ul className="space-y-3">
+              <li>
+                <a href="mailto:info@arklinegames.com" className="text-sm text-neutral-400 hover:text-white transition-colors">
+                  info@arklinegames.com
+                </a>
+              </li>
+              <li className="text-sm text-neutral-400">İstanbul, Türkiye</li>
+            </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <div>
-            © {new Date().getFullYear()} Arkline Games Studios. Tüm hakları saklıdır.
-          </div>
+        <div className="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p className="text-xs text-neutral-600">© {new Date().getFullYear()} Arkline Games</p>
           <div className="flex items-center gap-6">
-            <span className="hover:text-slate-300 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-300 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-300 cursor-pointer">Community Guidelines</span>
+            <span className="text-xs text-neutral-600 hover:text-neutral-400 cursor-pointer">Privacy Policy</span>
+            <span className="text-xs text-neutral-600 hover:text-neutral-400 cursor-pointer">Terms of Service</span>
           </div>
         </div>
       </div>

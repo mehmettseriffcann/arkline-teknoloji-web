@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import GamesNavbar from "@/components/games/GamesNavbar";
 import GamesHero from "@/components/games/GamesHero";
 import GamesShowcase from "@/components/games/GamesShowcase";
@@ -6,26 +6,22 @@ import GamesCulture from "@/components/games/GamesCulture";
 import GamesCareers from "@/components/games/GamesCareers";
 import GamesFooter from "@/components/games/GamesFooter";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "ARKLINE GAMES | World-Class Mobile Gaming Studio",
+  title: "Arkline Games | Mobile Gaming Studio",
   description:
-    "We craft extraordinary mobile game hits. Milyonların oynadığı Match-3, Runner, Merge ve strateji oyunlarımızla dünyayı eğlendiriyoruz.",
-  keywords: [
-    "Arkline Games",
-    "Mobile Games",
-    "Casual Games",
-    "Unity Game Developer",
-    "Dream Games",
-    "Peak Games",
-    "Match-3",
-  ],
+    "İstanbul merkezli, milyonların oynadığı yüksek kaliteli mobil oyunlar üreten stüdyo.",
 };
 
 export default function GamesPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-pink-500 selection:text-white">
+    <div className="min-h-screen bg-white text-neutral-900">
       <GamesNavbar />
-      <main className="flex-1">
+      <main>
         <GamesHero />
         <GamesShowcase />
         <GamesCulture />

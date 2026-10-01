@@ -5,34 +5,22 @@ import Navbar from "@/components/energy/Navbar";
 import Hero from "@/components/energy/Hero";
 import ServicesSection from "@/components/energy/ServicesSection";
 import WhyUsSection from "@/components/energy/WhyUsSection";
-import CalculatorSection from "@/components/energy/CalculatorSection";
-import ProcessSection from "@/components/energy/ProcessSection";
 import ProjectsSection from "@/components/energy/ProjectsSection";
 import ContactSection from "@/components/energy/ContactSection";
 import Footer from "@/components/energy/Footer";
 
 export default function HomePage() {
-  const [selectedServiceForQuote, setSelectedServiceForQuote] = useState<string>("");
-
-  const handleSelectService = (title: string) => {
-    setSelectedServiceForQuote(title);
-  };
-
-  const handleCalculatorQuote = (info: string) => {
-    setSelectedServiceForQuote(info);
-  };
+  const [selectedService, setSelectedService] = useState("");
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
+    <div className="min-h-screen bg-white text-neutral-900">
       <Navbar />
-      <main className="flex-1">
+      <main>
         <Hero />
-        <ServicesSection onSelectServiceForQuote={handleSelectService} />
+        <ServicesSection onSelectService={setSelectedService} />
         <WhyUsSection />
-        <CalculatorSection onQuoteWithData={handleCalculatorQuote} />
-        <ProcessSection />
         <ProjectsSection />
-        <ContactSection initialService={selectedServiceForQuote} />
+        <ContactSection initialService={selectedService} />
       </main>
       <Footer />
     </div>

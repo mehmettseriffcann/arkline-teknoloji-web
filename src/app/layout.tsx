@@ -7,20 +7,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ARKLİNE TEKNOLOJİ | Gücünüzü Geleceğe Taşıyoruz",
+  title: "ARKLİNE TEKNOLOJİ | Elektrik & Enerji Çözümleri",
   description:
-    "Elektrik ve enerji çözümlerinde profesyonel, güvenilir ve kaliteli hizmet. Alçak & Yüksek Gerilim, GES, Pano İmalatı, Otomasyon ve Mühendislik.",
-  keywords: [
-    "Arkline Teknoloji",
-    "Elektrik Taahhüt",
-    "Yüksek Gerilim",
-    "Alçak Gerilim",
-    "Güneş Enerji Sistemleri",
-    "GES",
-    "Pano İmalatı",
-    "Kompanzasyon",
-    "Enerji Altyapısı",
-  ],
+    "Elektrik ve enerji çözümlerinde profesyonel, güvenilir ve kaliteli hizmet.",
   authors: [{ name: "Arkline Teknoloji" }],
 };
 
@@ -31,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col bg-slate-950 text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950">
+      <body className="bg-white text-neutral-900 antialiased">
         {children}
       </body>
     </html>
