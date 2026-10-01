@@ -2,66 +2,57 @@
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] bg-neutral-900 flex items-end">
-      {/* Full-screen dark background - energy industry uses dark hero + one accent color */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-neutral-800"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom right, #111 0%, #1a1a1a 50%, #0f172a 100%)",
-        }}
+    <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
+      {/* Real photo from Unsplash - electrical substation */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80&auto=format&fit=crop"
+        alt="Elektrik altyapısı"
+        className="absolute inset-0 w-full h-full object-cover"
       />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/55" />
 
-      {/* Single subtle horizontal line - Vestas-style minimal element */}
-      <div className="absolute left-0 right-0 top-1/2 h-px bg-white/5" />
-
-      {/* Content - bottom-left aligned like Ørsted, Vestas */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20 w-full">
-        <div className="max-w-2xl">
-          <p className="text-sm font-medium text-neutral-400 uppercase tracking-widest mb-6">
-            Elektrik & Enerji Çözümleri
-          </p>
-          <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-8">
-            Gücünüzü
-            <br />
-            Geleceğe
-            <br />
-            Taşıyoruz.
+        <div className="max-w-xl">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Elektrik ve Enerji Çözümleri
           </h1>
-          <p className="text-lg text-neutral-400 leading-relaxed mb-10 max-w-lg">
-            Projeden uygulamaya, arızadan bakıma kadar tüm elektrik ihtiyaçlarınızda
-            profesyonel mühendislik hizmetleri.
+          <p className="text-base text-white/70 leading-relaxed mb-8 max-w-md">
+            Proje tasarımından kuruluma, bakımdan onarıma kadar
+            elektrik mühendisliği hizmetleri sunuyoruz.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap gap-3">
             <a
               href="#hizmetler"
-              className="px-6 py-3 bg-white text-neutral-900 text-sm font-semibold hover:bg-neutral-100 transition-colors"
+              className="px-5 py-2.5 bg-white text-neutral-900 text-sm font-semibold hover:bg-neutral-100 transition-colors"
             >
               Hizmetlerimiz
             </a>
             <a
               href="#iletisim"
-              className="px-6 py-3 border border-white/30 text-white text-sm font-semibold hover:border-white/60 transition-colors"
+              className="px-5 py-2.5 border border-white/40 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
             >
-              İletişime Geçin
+              İletişim
             </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom stats bar - like Enerjisa */}
-      <div className="absolute bottom-0 left-0 right-0 border-t border-white/10">
+      {/* Bottom bar */}
+      <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
-              ["500+", "Tamamlanan Proje"],
+              ["500+", "Proje"],
               ["50+ MW", "Kurulu GES"],
-              ["13", "Faaliyet Alanı"],
+              ["13", "Hizmet Alanı"],
               ["7/24", "Teknik Destek"],
             ].map(([num, label]) => (
-              <div key={label} className="py-5 px-6 first:pl-0">
-                <div className="text-2xl font-bold text-white">{num}</div>
-                <div className="text-xs text-neutral-500 mt-1">{label}</div>
+              <div key={label} className="py-4 px-6 first:pl-0">
+                <div className="text-xl font-bold text-white">{num}</div>
+                <div className="text-xs text-white/50 mt-0.5">{label}</div>
               </div>
             ))}
           </div>

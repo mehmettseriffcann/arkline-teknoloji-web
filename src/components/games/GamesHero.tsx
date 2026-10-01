@@ -1,61 +1,61 @@
 "use client";
 
-// Dream Games style: full-width hero image (placeholder), big title below or overlay
+// Gram Games style: full-width video/image hero with title overlay
+// Circle.gs style: centered, single game focus
 export default function GamesHero() {
   return (
     <>
-      {/* Full-width hero image block - Dream Games uses a full bleed character image */}
-      <div className="w-full h-[70vh] min-h-[500px] bg-neutral-100 mt-16 flex items-end">
-        {/* Background - placeholder for actual game artwork */}
-        <div className="w-full h-full bg-gradient-to-br from-neutral-200 via-neutral-100 to-neutral-50 flex items-center justify-center relative">
-          <span className="text-neutral-300 text-sm uppercase tracking-widest select-none">
-            Game Artwork
-          </span>
+      {/* Gram Games style: full-width dark hero with overlay text */}
+      <section className="relative w-full h-screen min-h-[500px] flex items-center justify-center pt-14 overflow-hidden bg-neutral-900">
+        {/* Background: colorful game-themed photo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&q=80&auto=format&fit=crop"
+          alt="Gaming"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+
+        {/* Content - center, like Gram Games "Building bonds through play" */}
+        <div className="relative z-10 text-center px-6 max-w-2xl">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-5">
+            Oyun yapıyoruz.
+          </h1>
+          <p className="text-base text-white/60 leading-relaxed mb-8 max-w-md mx-auto">
+            Arkline Games, İstanbul merkezli bir mobil oyun şirketidir.
+            Eğlenceli, kaliteli oyunlar üretiyoruz.
+          </p>
+          <a
+            href="#games"
+            className="inline-block px-6 py-3 bg-white text-neutral-900 text-sm font-semibold hover:bg-neutral-100 transition-colors"
+          >
+            Oyunlarımız
+          </a>
         </div>
-      </div>
+      </section>
 
-      {/* Below hero content - Dream Games places studio identity below the image */}
-      <section id="about" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      {/* About - Peak style: clean white section below hero */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight">
-                Milyonların Oynadığı Oyunlar Yapıyoruz.
-              </h1>
-            </div>
-            <div className="flex flex-col gap-6">
-              <p className="text-base text-neutral-500 leading-relaxed">
-                Arkline Games, İstanbul merkezli bir mobil oyun şirketidir. Yüksek kaliteli
-                karakterler ve sürükleyici oynanış deneyimleri yaratmaya odaklanıyoruz.
+              <p className="text-xs text-neutral-400 uppercase tracking-widest mb-4">Our Story</p>
+              <h2 className="text-3xl font-bold text-neutral-900 mb-6 leading-snug">
+                Teknoloji ile yaratıcılığı birleştiriyoruz.
+              </h2>
+              <p className="text-sm text-neutral-500 leading-relaxed mb-4">
+                Arkline Games olarak mobil oyunculara yüksek kaliteli, ilgi çekici deneyimler
+                sunmak için çalışıyoruz.
               </p>
-              <p className="text-base text-neutral-500 leading-relaxed">
-                Amacımız, teknoloji ile yaratıcılığı birleştirerek yıllarca oynanacak
-                yüksek kaliteli mobil oyunlar geliştirmektir.
+              <p className="text-sm text-neutral-500 leading-relaxed">
+                İstanbul ve Londra ofislerimizden dünya genelinde milyonlarca oyuncuya ulaşıyoruz.
               </p>
-              <div className="pt-4">
-                <a
-                  href="#careers"
-                  className="inline-block px-6 py-3 bg-neutral-900 text-white text-sm font-semibold hover:bg-neutral-700 transition-colors"
-                >
-                  Kariyer Fırsatları
-                </a>
-              </div>
             </div>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 divide-x divide-neutral-200 border-t border-b border-neutral-200">
-            {[
-              ["50M+", "Global İndirme"],
-              ["160+", "Ülke"],
-              ["4.8★", "Ortalama Puan"],
-              ["2024", "Kuruluş"],
-            ].map(([num, label]) => (
-              <div key={label} className="py-8 px-8 first:pl-0">
-                <div className="text-3xl font-bold text-neutral-900">{num}</div>
-                <div className="text-sm text-neutral-400 mt-1">{label}</div>
-              </div>
-            ))}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=75&auto=format&fit=crop"
+              alt="Takım çalışması"
+              className="w-full aspect-[4/3] object-cover"
+            />
           </div>
         </div>
       </section>
