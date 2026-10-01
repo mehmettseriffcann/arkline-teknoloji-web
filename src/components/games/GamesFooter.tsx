@@ -6,27 +6,34 @@ export default function GamesFooter() {
   return (
     <footer className="bg-neutral-900">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-10 mb-12">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
           <div>
             <p className="font-bold text-white text-sm mb-2">Arkline Games</p>
-            <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
-              İstanbul merkezli mobil oyun şirketi.
+            <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
+              Istanbul-based mobile game studio.
             </p>
           </div>
-          <div className="flex gap-12">
+          <div className="flex gap-10">
             <div>
-              <p className="text-xs text-neutral-600 uppercase tracking-widest mb-4">Şirket</p>
+              <p className="text-xs text-neutral-600 uppercase tracking-widest mb-4">Studio</p>
               <ul className="space-y-2.5">
-                {[["Hakkımızda", "#about"], ["Oyunlar", "#games"], ["Kariyer", "#careers"]].map(([l, h]) => (
-                  <li key={l}><a href={h} className="text-xs text-neutral-400 hover:text-white transition-colors">{l}</a></li>
-                ))}
+                <li><a href="#about" className="text-xs text-neutral-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#culture" className="text-xs text-neutral-400 hover:text-white transition-colors">Culture</a></li>
               </ul>
             </div>
             <div>
-              <p className="text-xs text-neutral-600 uppercase tracking-widest mb-4">İletişim</p>
+              <p className="text-xs text-neutral-600 uppercase tracking-widest mb-4">Contact</p>
               <ul className="space-y-2.5">
-                <li><a href="mailto:info@arklinegames.com" className="text-xs text-neutral-400 hover:text-white transition-colors">info@arklinegames.com</a></li>
-                <li><Link href="/" className="text-xs text-neutral-400 hover:text-white transition-colors">Arkline Teknoloji →</Link></li>
+                <li>
+                  <a href="mailto:info@arklinegames.com" className="text-xs text-neutral-400 hover:text-white transition-colors">
+                    info@arklinegames.com
+                  </a>
+                </li>
+                <li>
+                  <Link href="/" className="text-xs text-neutral-400 hover:text-white transition-colors">
+                    Arkline Energy →
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

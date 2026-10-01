@@ -5,7 +5,6 @@ import Navbar from "@/components/energy/Navbar";
 import Hero from "@/components/energy/Hero";
 import ServicesSection from "@/components/energy/ServicesSection";
 import WhyUsSection from "@/components/energy/WhyUsSection";
-import ProjectsSection from "@/components/energy/ProjectsSection";
 import ContactSection from "@/components/energy/ContactSection";
 import Footer from "@/components/energy/Footer";
 
@@ -19,7 +18,6 @@ export default function HomePage() {
         <Hero />
         <ServicesSection onSelectService={setSelectedService} />
         <WhyUsSection />
-        <ProjectsSection />
         <ContactSection initialService={selectedService} />
       </main>
       <Footer />

@@ -33,29 +33,31 @@ export default function ServicesSection({
           <h2 className="text-3xl font-bold text-neutral-900">Faaliyet Alanlarımız</h2>
         </div>
 
-        <div className="border-t border-neutral-200">
+        {/* 3-column grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
           {SERVICES.map((s) => (
-            <div key={s.number} className="border-b border-neutral-200">
-              <button
-                className="w-full py-5 flex items-start gap-6 text-left group cursor-pointer"
-                onClick={() => setActive(active === s.number ? null : s.number)}
-              >
-                <span className="text-xs text-neutral-300 font-mono w-6 shrink-0 pt-0.5">{s.number}</span>
-                <div className="flex-1">
-                  <span className="text-sm font-semibold text-neutral-800 group-hover:text-neutral-500 transition-colors">
-                    {s.title}
-                  </span>
-                  {active === s.number && (
-                    <p className="mt-2.5 text-sm text-neutral-500 leading-relaxed max-w-lg">{s.desc}</p>
-                  )}
-                </div>
-                <span className="text-neutral-300 shrink-0 text-lg">{active === s.number ? "−" : "+"}</span>
-              </button>
-            </div>
+            <button
+              key={s.number}
+              onClick={() => setActive(active === s.number ? null : s.number)}
+              className="group text-left bg-white p-7 hover:bg-neutral-50 transition-colors cursor-pointer"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <span className="text-2xl font-light text-neutral-200 select-none">{s.number}</span>
+                <span className="text-neutral-300 text-xl group-hover:text-neutral-500 transition-colors">
+                  {active === s.number ? "−" : "+"}
+                </span>
+              </div>
+              <h3 className="text-sm font-semibold text-neutral-800 group-hover:text-neutral-600 transition-colors leading-snug">
+                {s.title}
+              </h3>
+              {active === s.number && (
+                <p className="mt-3 text-xs text-neutral-400 leading-relaxed">{s.desc}</p>
+              )}
+            </button>
           ))}
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <button
             onClick={() => onSelectService?.("Genel Hizmet Talebi")}
             className="px-5 py-2.5 bg-neutral-900 text-white text-sm font-medium hover:bg-neutral-700 transition-colors cursor-pointer"
