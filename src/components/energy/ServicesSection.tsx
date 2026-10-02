@@ -73,7 +73,7 @@ const SERVICES = [
     number: "12",
     title: "Fabrika ve Şantiye Elektriği",
     desc: "Ağır sanayi ve geçici şantiye enerji sistemleri.",
-    img: "https://images.unsplash.com/photo-1565620551738-39b9d35f5ac9?w=600&q=70&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=70&auto=format&fit=crop",
   },
   {
     number: "13",
