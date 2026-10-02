@@ -1,9 +1,9 @@
 "use client";
 
-// Peak / Gram style culture section - English
+// Simple culture/team section - no boastful claims
 export default function GamesCulture() {
   return (
-    <section id="culture" className="py-20 bg-neutral-50">
+    <section id="culture" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -13,31 +13,16 @@ export default function GamesCulture() {
             className="w-full aspect-[4/3] object-cover"
           />
           <div>
-            <p className="text-xs text-neutral-400 uppercase tracking-widest mb-4">Life at Arkline</p>
+            <p className="text-xs text-neutral-400 uppercase tracking-widest mb-4">Culture</p>
             <h2 className="text-3xl font-bold text-neutral-900 mb-6 leading-snug">
-              Everyone shapes the product.
+              How we work.
             </h2>
             <p className="text-sm text-neutral-500 leading-relaxed mb-4">
-              We work in small, autonomous teams where every person has a real opportunity
-              to contribute and make an impact.
+              We work in small teams where everyone contributes to the product.
             </p>
             <p className="text-sm text-neutral-500 leading-relaxed">
-              If you want to be part of a fast-growing studio, we'd love to hear from you.
+              If you'd like to join us, reach out below.
             </p>
-
-            <div className="mt-10 border-t border-neutral-200 pt-8">
-              {[
-                ["Quality", "High standards in every detail."],
-                ["Speed", "Fast iteration, fast learning."],
-                ["Ownership", "Small teams, real impact."],
-              ].map(([title, desc]) => (
-                <div key={title} className="py-4 border-b border-neutral-100 flex gap-6">
-                  <span className="text-xs font-semibold text-neutral-900 w-20 shrink-0 pt-0.5">{title}</span>
-                  <span className="text-xs text-neutral-400">{desc}</span>
-                </div>
-              ))}
-            </div>
-
             <div className="mt-8">
               <a
                 href="mailto:careers@arklinegames.com"

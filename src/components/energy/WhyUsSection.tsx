@@ -24,8 +24,6 @@ export default function WhyUsSection() {
 
             <div className="mt-10 grid grid-cols-2 gap-6">
               {[
-                ["500+", "Tamamlanan proje"],
-                ["50+ MW", "Kurulu GES"],
                 ["13", "Hizmet alanı"],
                 ["7/24", "Teknik destek"],
               ].map(([num, label]) => (

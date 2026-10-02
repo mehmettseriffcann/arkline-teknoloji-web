@@ -40,24 +40,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            {[
-              ["500+", "Proje"],
-              ["50+ MW", "Kurulu GES"],
-              ["13", "Hizmet Alanı"],
-              ["7/24", "Teknik Destek"],
-            ].map(([num, label]) => (
-              <div key={label} className="py-4 px-6 first:pl-0">
-                <div className="text-xl font-bold text-white">{num}</div>
-                <div className="text-xs text-white/50 mt-0.5">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

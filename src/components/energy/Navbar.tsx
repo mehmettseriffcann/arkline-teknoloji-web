@@ -23,7 +23,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold tracking-tight text-white">
+          <span
+            className={`text-lg font-bold tracking-tight transition-colors ${
+              scrolled ? "text-neutral-900" : "text-white"
+            }`}
+          >
             ARKLİNE
           </span>
           <span
@@ -40,7 +44,6 @@ export default function Navbar() {
           {[
             ["Hizmetler", "#hizmetler"],
             ["Hakkımızda", "#hakkimizda"],
-            ["Projeler", "#projeler"],
             ["İletişim", "#iletisim"],
           ].map(([label, href]) => (
             <a
@@ -92,7 +95,6 @@ export default function Navbar() {
             {[
               ["Hizmetler", "#hizmetler"],
               ["Hakkımızda", "#hakkimizda"],
-              ["Projeler", "#projeler"],
               ["İletişim", "#iletisim"],
               ["Games", "/games"],
             ].map(([label, href]) => (
