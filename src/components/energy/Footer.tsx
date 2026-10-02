@@ -53,7 +53,7 @@ export default function Footer() {
                   info@arklineteknoloji.com
                 </a>
               </li>
-              <li className="text-sm text-neutral-400">İstanbul, Türkiye</li>
+              <li className="text-sm text-neutral-400">Elazığ</li>
             </ul>
           </div>
         </div>

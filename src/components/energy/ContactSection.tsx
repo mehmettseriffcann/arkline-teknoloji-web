@@ -60,7 +60,7 @@ export default function ContactSection({ initialService }: ContactProps) {
               <div>
                 <p className="text-xs text-neutral-500 uppercase tracking-widest mb-1">Adres</p>
                 <p className="text-base text-neutral-300">
-                  Organize Sanayi Bölgesi, İstanbul
+                  Elazığ
                 </p>
               </div>
             </div>
