@@ -10,7 +10,7 @@ export default function GamesFooter() {
           <div>
             <p className="font-bold text-white text-sm mb-2">Arkline Games</p>
             <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
-              Istanbul-based mobile game studio.
+              A mobile game studio.
             </p>
           </div>
           <div className="flex gap-10">
